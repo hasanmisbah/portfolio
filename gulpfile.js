@@ -224,7 +224,7 @@ function vendor(done){
 function font(done){
     merge(fonts.map(function(font){
         return gulp.src([
-            'node_modules/' + font.src + '/**/*.{ttf,woff,eot,svg,min.css,min.js}',
+            'node_modules/' + font.src + '/**/*.{ttf,woff,eot,svg,min.css,min.js,woff2}',
             '!node_modules/'+font.src+'/**/*.map',
             '!node_modules/'+font.src+'/**/*.selection.json',
             '!node_modules/'+font.src+'/.npmignore',
