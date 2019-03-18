@@ -4,7 +4,8 @@
     "description": "A personal portfolio for my self",
     "main": "index.html",
     "scripts": {
-        "dev": "gulp vendor && gulp watch"
+        "dev": "gulp vendor && gulp watch",
+        "build": "gulp"
     },
     "keywords": [
         "portfolio",

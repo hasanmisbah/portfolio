@@ -280,4 +280,4 @@ exports.vendor = gulp.series(modernizrbuild, font, vendor);
 exports.font = font;
 exports.clean = devclean;
 exports.watch = gulp.parallel(inject, css, js, images, browsers, watch_file);
-exports.default = gulp.parallel(modernizrbuild, vendor, font, inject, css, js);
+exports.default = gulp.parallel(modernizrbuild, vendor, images, font, inject, css, js);
