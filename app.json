@@ -1,0 +1,16 @@
+{
+    "name"          : "my-portfolio",
+    "version"       : "1.0.0",
+    "description"   : "A personal portfolio for my self",
+    "uri"           : "https://github.com/hasanmisbah/",
+    "author"        : "Hasan Misbah",
+    "author_uri"    : "https://hasanmisbah.github.io",
+    "license"       : "MIT",
+    "license_uri"   : "https://opensource.org/licenses/mit",
+    "text_domain"   : "",
+    "tags"          : [
+        "portfolio",
+        " one page"
+    ]
+    
+}
