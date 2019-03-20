@@ -1,17 +1,19 @@
 let $ = require('jquery');
 let Typed = require('typed.js');
 require('jquery-knob');
+require('slick-carousel');
 
 
 (function(){
     $(window).on('load', function(){
     // code to execute 
     __has_header();
-    console.log('i am Loaded');
+        onLoad();
     
     });
 
     $(document).ready(function(){
+        $('#loader-wrapper').fadeOut(500);
        
         __has();
     });
@@ -24,6 +26,7 @@ let __has = function(){
             this.typed(['WordPress Developer', 'Linux Freak', 'FrontEnd Developer', 'WordPress Fanatic']);
             this.knob('.skill', '#013243');
             this.knob('.skill-f', '#1abc9c');
+            this.slick();
         },
         // setting navbar sticky
         stickynav: function (elem, class_name) {
@@ -58,6 +61,15 @@ let __has = function(){
                 displayInput : true,
                 inputColor : color
             });
+        },
+        slick : function(){
+            $(".testimonial-items").slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                arrows: false
+            });
         }
 
     };
@@ -68,4 +80,9 @@ let __has = function(){
 let __has_header = function(){
   return window.LogRocket && window.LogRocket.init('f0lnrk/my-portfolio');
 };
+function onLoad() { 
+    var now = new Date().getTime();
+    var page_load_time = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;
+    console.log("Page loaded in: " + page_load_time/1000 + ' sec');
+  }
 

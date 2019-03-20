@@ -101,6 +101,10 @@ let vendors = [
         name: 'prefixfree',
         path: 'prefixfree'
     },
+    {
+        name : 'slick',
+        path : 'slick-carousel/slick'
+    }
 ];
 let fonts = [{
     src: '@fortawesome/fontawesome-free',
@@ -215,7 +219,7 @@ function css(done){
 
 function vendor(done){
     merge(vendors.map(function(vendor){
-        return gulp.src('node_modules/' + vendor.path +'/**/*.min.+(css|js)*')
+        return gulp.src('node_modules/' + vendor.path +'/**/*.+(css|js|woff|gif)*')
                     .pipe(gulp.dest(pathName() + '/assets/vendor/' + vendor.path.replace(/\/.*/, '')));
     }));
     done();
