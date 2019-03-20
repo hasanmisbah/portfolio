@@ -76,8 +76,7 @@ let __has = function (data) {
 
     };
     // Call The Function
-    data = __has.init();
-    return data();
+    __has.init();
 };
 
 
